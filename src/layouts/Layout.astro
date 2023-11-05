@@ -1,0 +1,53 @@
+---
+interface Props {
+	title: string;
+}
+
+import "cal-sans";
+const { title } = Astro.props;
+import Header from "../components/Header.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>anurag • {title}</title>
+	</head>
+	<body>
+		<Header/>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+	html {
+		font-family: 'Poppins', sans-serif;		
+		background: #13151a;
+		color: #cfd1d7;
+		font-weight: 600;
+	}
+	body{
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}	
+</style>
