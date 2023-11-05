@@ -3,18 +3,22 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
+	date: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body,date } = Astro.props;
 ---
 
-<li class="link-card">
+<li class="link-card hover:border-yellow-600 border-l-2 border-[#ffffff1a] transition-all duration-300 ease-in-out">
 	<a href={href}>
+		<!-- <div class="flex justify-end">
+			{date}
+		</div> -->
 		<h2>
 			{title}
-			<span>&rarr;</span>
+			<!-- <span>&rarr;</span> -->
 		</h2>
-		<p>
+		<p class="text-sm font-normal">
 			{body}
 		</p>
 	</a>
@@ -26,11 +30,11 @@ const { href, title, body } = Astro.props;
 		padding: 1px;
 		background-color: #23262d;
 		background-image: none;
-		background-size: 400%;
+		/* background-size: 400%; */
 		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+		/* background-position: 100%; */
+		/* transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1); */
+		/* box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); */
 	}
 	.link-card > a {
 		width: 100%;
@@ -44,7 +48,7 @@ const { href, title, body } = Astro.props;
 	}
 	h2 {
 		margin: 0;
-		font-size: 1.25rem;
+		font-size: 1.0rem;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	p {

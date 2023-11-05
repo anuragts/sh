@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 // import Card from '../components/Card.astro';
+import CraftsComponent from "../components/craftsComponent.astro";
 ---
 
 <Layout title="home">
@@ -22,10 +23,13 @@ import Layout from "../layouts/Layout.astro";
 		<div class="mt-[1.5rem] text-xl">
 			If you also share the same vibes , lets connect ✨️
 			<div class="mt-5 bt text-sm ">
-				<div class="py-3 px-3 bg-white text-slate-600 absolute rounded-xl">
+				<div class="py-3 px-3 bg-white text-slate-600 inline-block rounded-xl border-2 hover:bg-[#13151a] hover:text-white">
 					<a href="https://cal.com/anuragtsx">meet / cal.com</a>
 				</div>
 			</div>
+			<hr class="my-[2rem] text-slate-300 rounded-sm">
+			<CraftsComponent/>
+			<hr class="my-[2rem] text-slate-300 rounded-sm">
 		</div>
 	</main>
 </Layout>
@@ -52,5 +56,8 @@ import Layout from "../layouts/Layout.astro";
 	.bt{
 		font-weight: 800;
 
+	}
+	hr{
+		border: 1.5px solid ;
 	}
 </style>
