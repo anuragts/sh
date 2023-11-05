@@ -6,6 +6,7 @@ interface Props {
 import "cal-sans";
 const { title } = Astro.props;
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -15,12 +16,15 @@ import Header from "../components/Header.astro";
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>anurag • {title}</title>
 	</head>
 	<body>
 		<Header/>
 		<slot />
+		<hr class="mt-[2rem] text-slate-300 rounded-sm">
+		<Footer/>
 	</body>
 </html>
 <style is:global>
@@ -50,4 +54,7 @@ import Header from "../components/Header.astro";
 			Courier New,
 			monospace;
 	}	
+	hr{
+		border: 1.5px solid ;
+	}
 </style>
