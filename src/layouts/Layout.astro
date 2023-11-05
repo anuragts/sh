@@ -16,27 +16,42 @@ import Footer from "../components/Footer.astro";
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>anurag • {title}</title>
+		<!-- Google tag (gtag.js) -->
+		<script
+			type="text/partytown"
+			src="https://www.googletagmanager.com/gtag/js?id=G-JWLLHS6347"
+		></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-JWLLHS6347");
+		</script>
 	</head>
 	<body>
-		<Header/>
+		<Header />
 		<slot />
-		<hr class="mt-[2rem] text-slate-300 rounded-sm">
-		<Footer/>
+		<hr class="mt-[2rem] text-slate-300 rounded-sm" />
+		<Footer />
 	</body>
 </html>
 <style is:global>
-	
-	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 	html {
-		font-family: 'Poppins', sans-serif;		
+		font-family: "Poppins", sans-serif;
 		background: #13151a;
 		color: #cfd1d7;
 		font-weight: 600;
 	}
-	body{
+	body {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
@@ -53,8 +68,8 @@ import Footer from "../components/Footer.astro";
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
-	}	
-	hr{
-		border: 1.5px solid ;
+	}
+	hr {
+		border: 1.5px solid;
 	}
 </style>
