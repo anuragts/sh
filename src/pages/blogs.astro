@@ -11,7 +11,7 @@ const metadata ={
     description: 'Some of my brain dumps',
 }
 
-let blogs = await Astro.glob<Frontmatter>('./blogs/*.mdx');
+let blogs = await Astro.glob<Frontmatter>('./posts/*.mdx');
 blogs = blogs.sort((a,b)=> new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
 ---
 
