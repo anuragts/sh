@@ -1,5 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+interface Frontmatter{
+    title:string;
+    pubDate:string;
+    description:string;
+}
+
+const metadata ={
+    title: "Writings - anuragts",
+    description: 'Some of my brain dumps',
+}
+
+let blogs = await Astro.glob<Frontmatter>('./blogs/*.mdx');
+blogs = blogs.sort((a,b)=> new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
 ---
 
 <Layout title="blog">
